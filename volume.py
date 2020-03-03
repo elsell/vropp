@@ -50,7 +50,8 @@ print("Discovered {} Cast Devices:\n".format(len(l)))
 while(True):
     # PRINT TARGET LIST
     print("-"*80)
-    [print(n) for n in sorted([cc.device.friendly_name for cc in l])]
+    sortedDevices = [sorted([cc.device.friendly_name for cc in l])]
+    [print("{:<30}{:<30}{:<}".format(a,b,c)) for a,b,c in zip(sortedDevices[::3], sortedDevices[1::3], sortedDevices[2::3])]
     print("_"*80 + "\n")
 
     # TARGET PROMPT 
