@@ -51,7 +51,7 @@ while(True):
     # PRINT TARGET LIST
     print("-"*80)
     [print(n) for n in sorted([cc.device.friendly_name for cc in l])]
-    print("\n" + "_"*80)
+    print("_"*80 + "\n")
 
     # TARGET PROMPT 
     target = input("selectTarget> ")
