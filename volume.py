@@ -1,15 +1,16 @@
-
-# -*- coding: UTF-8 -*-
 import pychromecast
+import sys
 from time import sleep
 try:
     import readline
 except ImportError:
     import pyreadline as readline
 
-CAST_NAME = "Great Room 🌈"
-#CAST_NAME = "Kayla Bedroom speaker"
+header = ""
+with open("header", "rb") as headFile:
+    header =  headFile.read().decode("UTF-16")
 
+print(header)
 
 print("Discovering Chromecasts...")
 l = (pychromecast.get_chromecasts())
