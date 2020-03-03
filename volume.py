@@ -1,20 +1,26 @@
 import pychromecast
 import sys
+import os
 from time import sleep
 try:
     import readline
 except ImportError:
     import pyreadline as readline
 
+hLine = "=" * 80
 header = ""
+about = "The One-Stop Shop for Annoying Your Fellow Google Cast Users"
 with open("header", "rb") as headFile:
     header =  headFile.read().decode("UTF-16")
 
-print(header)
+print(hLine)
+[print(line.center(80)) for line in header.splitlines()]
+print(about.center(80))
+print(hLine)
 
-print("Discovering Chromecasts...")
+print("Performing Discovery for Cast Devices...")
 l = (pychromecast.get_chromecasts())
-print("Discovered {} chromecasts:".format(len(l)))
+print("Discovered {} Cast Devices:".format(len(l)))
 print()
 
 def completer(text, state):
