@@ -69,7 +69,7 @@ while(True):
             i = i / 10
             cast.set_volume(i)
             sleep(.4)
-        print("Attack Complete.\n\n")
+        print("Attack Complete.")
 
     except Exception as e:
         print("[ fail ] Could not connect to {}. Exception: {}".format(target,str(e)))
