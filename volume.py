@@ -40,7 +40,7 @@ print("Performing Discovery for Cast Devices...")
 l = (pychromecast.get_chromecasts())
 
 # It's pretty useless to run without any targets...so don't!
-if len(l) == 0:
+if len(l[0]) == 0:
     print("[ fail ] No Cast Devices Found")
     exit(0)
 
